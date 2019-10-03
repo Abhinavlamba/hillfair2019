@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1C20"
+    android:orientation="vertical"
+    android:paddingTop="56dp">
+
+    <ProgressBar
+        android:id="@+id/loadwall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:theme="@style/AppTheme1"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="38dp"
+        android:clipToPadding="false"
+        android:paddingBottom="64dp"
+        android:paddingTop="46dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".fragment.ScheduleFragment">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/date1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="24dp"-->
+                    <!--android:layout_marginBottom="16dp"-->
+                    <!--android:clipToPadding="false"-->
+                    <!--android:fontFamily="@font/ps"-->
+                    <!--android:text="3 October"-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:visibility="gone" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/firstRec1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/date2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="24dp"-->
+                    <!--android:layout_marginBottom="16dp"-->
+                    <!--android:clipToPadding="false"-->
+                    <!--android:fontFamily="@font/ps"-->
+                    <!--android:paddingTop="16dp"-->
+                    <!--android:text="4 October"-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:visibility="gone" />-->
+
+                <!--<androidx.recyclerview.widget.RecyclerView-->
+                    <!--android:id="@+id/firstRec2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:visibility="gone" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/date3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginLeft="24dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="16dp"-->
+                    <!--android:clipToPadding="false"-->
+                    <!--android:fontFamily="@font/ps"-->
+                    <!--android:paddingTop="16dp"-->
+                    <!--android:text="5 October"-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:visibility="gone" />-->
+
+                <!--<androidx.recyclerview.widget.RecyclerView-->
+                    <!--android:id="@+id/firstRec3"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:visibility="gone" />-->
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/psb"
+                android:gravity="center"
+                android:paddingTop="226dp"
+                android:text="No Schedule Yet"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/white_gradient" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:fontFamily="@font/psb"
+            android:text="Schedule"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

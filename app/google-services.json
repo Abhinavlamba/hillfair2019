@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1003460395361",
+    "firebase_url": "https://hillffair2k19-4f3ce.firebaseio.com",
+    "project_id": "hillffair2k19-4f3ce",
+    "storage_bucket": "hillffair2k19-4f3ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003460395361:android:f29c699c7b384271b54520",
+        "android_client_info": {
+          "package_name": "com.appteam.hillfair2k19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003460395361-rvbvdkkdhvrff94kvkec60rlb35d03m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appteam.hillfair2k19",
+            "certificate_hash": "e3d940cb6ed4e76f301a143d6d7ee88dc18453d5"
+          }
+        },
+        {
+          "client_id": "1003460395361-92h54g40h32ke0qlb4fddl5nho3tqc55.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appteam.hillfair2k19",
+            "certificate_hash": "4cfe6ee4a929466912c83af2e43aaa8d16f459dc"
+          }
+        },
+        {
+          "client_id": "1003460395361-506e6sfbo7l0j2shbfga1j69ov8ik5ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlRLDNT0D_YtxnM3uNkjvXzyKhihi9vPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003460395361-506e6sfbo7l0j2shbfga1j69ov8ik5ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

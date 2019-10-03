@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1C20"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp" />
+
+    <FrameLayout
+        android:id="@+id/fragmentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="48dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="#101010"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:elevation="50dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:elevation="50dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:elevation="50dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:elevation="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="24dp"
+                    android:onClick="handleClick"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/homeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/psb"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:onClick="handleClick"
+                    android:paddingTop="4dp"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gamesLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/gamesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="24dp"
+                    android:onClick="handleClick"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/game" />
+
+                <TextView
+                    android:id="@+id/gameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/psb"
+                    android:maxLines="1"
+                    android:onClick="handleClick"
+                    android:text="Play"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scheduleLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/scheduleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="24dp"
+                    android:onClick="handleClick"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/schedule" />
+
+                <TextView
+                    android:id="@+id/scheduleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/psb"
+                    android:maxLines="1"
+                    android:onClick="handleClick"
+                    android:text="Schedule"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/couponsLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/couponButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="24dp"
+                    android:onClick="handleClick"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/coupon" />
+
+                <TextView
+                    android:id="@+id/couponTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/psb"
+                    android:maxLines="1"
+                    android:onClick="handleClick"
+                    android:text="Sponsors"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/navDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d01B1C20"
+        android:elevation="3dp"
+        android:visibility="gone"
+        tools:context=".activity.DashActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#1B1C20" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/white_gradient" />
+
+        <TextView
+            android:id="@+id/contributorNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:fontFamily="@font/psb"
+            android:text="Contributors"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profileNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/hillffairNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="About Hill'ffair"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/aboutNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="About Us"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/settingNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/notifNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Notification"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mapNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Campus Map"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/callNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Emergency Contact"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sponsorNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/facesmash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Face'ffair"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/leaderboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Leaderboard"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/coreTeamNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Core Team"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Schedule"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/clubsNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/psb"
+                android:text="Clubs"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        </FrameLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-8dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#1B1C20" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/navAnim"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="-84dp"
+            android:layout_marginRight="-100dp"
+            android:layout_marginBottom="-100dp"
+            android:foregroundTint="@color/white"
+            app:lottie_rawRes="@raw/menu" />
+
+        <View
+            android:id="@+id/nav"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="0dp"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="32dp"
+            android:src="@color/white"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/sh"
+            android:text="HILL AFFAIR"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ghost"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:elevation="5dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/spider"
+        app:lottie_repeatMode="reverse" />
+
+</RelativeLayout>
